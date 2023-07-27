@@ -18,6 +18,9 @@ local packer = require('packer').startup(function(use)
     -- Packer
     use 'wbthomason/packer.nvim'
 
+    -- GitHub Copilot
+    use 'github/copilot.vim' 
+
     -- Fuzzy Search
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
