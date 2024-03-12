@@ -19,7 +19,7 @@ local packer = require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- GitHub Copilot
-    use 'github/copilot.vim' 
+    use 'github/copilot.vim'
 
     -- Fuzzy Search
     use {
@@ -34,7 +34,7 @@ local packer = require('packer').startup(function(use)
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
     -- File navigation/bookmark
-    use 'theprimeagen/harpoon'
+    --use 'theprimeagen/harpoon'
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
@@ -53,8 +53,14 @@ local packer = require('packer').startup(function(use)
     -- Status line
     use 'nvim-lualine/lualine.nvim'
 
-    use 'lukas-reineke/indent-blankline.nvim'
-
+    use {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        opts = {
+            char = "|",
+            show_trailing_blankline_indent = false
+        }
+    }
     use {
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons",
